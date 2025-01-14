@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Customer by Country";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@{ Html.RenderPartial("~/Views/Shared/_Alert.cshtml"); }
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputCountry" class="sr-only">Pais</label>
+                <input type="text" class="form-control" name="country" id="country" placeholder="Pais" value="@ViewBag.Search">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+        </form>
+    </div>
+</div>
+
+<div class="row" style="margin-top:15px">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id de Cliente</th>
+                    <th scope="col">Nombre de la Compañía</th>
+                    <th scope="col">Nombre de Contacto</th>
+                    <th scope="col">Número de Teléfono</th>
+                    <th scope="col">Número de Fax</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in ViewBag.Customers)
+                {
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("CustomerOrdersInformation", "Customer", new { id = row.CustomerID })">@row.CustomerID</a>
+                        </td>
+                        <td>@row.CompanyName</td>
+                        <td>@row.ContactName</td>
+                        <td>@row.Phone</td>
+                        <td>@row.Fax</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

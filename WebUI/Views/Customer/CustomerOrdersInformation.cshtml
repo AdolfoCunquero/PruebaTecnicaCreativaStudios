@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Ordenes";
+}
+
+<button class="btn btn-primary" style="margin-top:15px" onclick="history.back()">Regresar</button>
+
+<h2>@ViewBag.Title.</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id de Pedido</th>
+                    <th scope="col">Id de Cliente</th>
+                    <th scope="col">Fecha del Pedido</th>
+                    <th scope="col">Fecha de Envío</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in ViewBag.Orders)
+                {
+                    <tr>
+                        <td>@row.OrderID</td>
+                        <td>@row.CustomerID</td>
+                        <td>@row.OrderDate</td>
+                        <td>@row.ShippedDate</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
