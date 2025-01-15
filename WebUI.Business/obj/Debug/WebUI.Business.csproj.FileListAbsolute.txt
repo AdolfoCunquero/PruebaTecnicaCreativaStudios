@@ -1,7 +1,0 @@
-C:\sources\PruebaTecnicaCreativaStudios\WebUI.Business\bin\Debug\WebUI.Business.dll.config
-C:\sources\PruebaTecnicaCreativaStudios\WebUI.Business\bin\Debug\WebUI.Business.dll
-C:\sources\PruebaTecnicaCreativaStudios\WebUI.Business\bin\Debug\WebUI.Business.pdb
-C:\sources\PruebaTecnicaCreativaStudios\WebUI.Business\obj\Debug\WebUI.Business.csproj.AssemblyReference.cache
-C:\sources\PruebaTecnicaCreativaStudios\WebUI.Business\obj\Debug\WebUI.Business.csproj.CoreCompileInputs.cache
-C:\sources\PruebaTecnicaCreativaStudios\WebUI.Business\obj\Debug\WebUI.Business.dll
-C:\sources\PruebaTecnicaCreativaStudios\WebUI.Business\obj\Debug\WebUI.Business.pdb

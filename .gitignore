@@ -1,3 +1,7 @@
 WebUI/bin/
 WebUI/obj/
+WebUI.Business/bin/
+WebUI.Business/obj/
+WCF.Business/bin/
+WCF.Business/obj/
 .vs/
