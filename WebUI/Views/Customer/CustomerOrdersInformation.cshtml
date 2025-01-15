@@ -19,14 +19,17 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var row in ViewBag.Orders)
+                @if(ViewBag.Orders != null)
                 {
-                    <tr>
-                        <td>@row.OrderID</td>
-                        <td>@row.CustomerID</td>
-                        <td>@row.OrderDate</td>
-                        <td>@row.ShippedDate</td>
-                    </tr>
+                    foreach (var row in ViewBag.Orders)
+                    {
+                        <tr>
+                            <td>@row.OrderID</td>
+                            <td>@row.CustomerID</td>
+                            <td>@row.OrderDate</td>
+                            <td>@row.ShippedDate</td>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>

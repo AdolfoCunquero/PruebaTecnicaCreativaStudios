@@ -32,17 +32,20 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var row in ViewBag.Customers)
+                @if (ViewBag.Customers != null)
                 {
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("CustomerOrdersInformation", "Customer", new { id = row.CustomerID })">@row.CustomerID</a>
-                        </td>
-                        <td>@row.CompanyName</td>
-                        <td>@row.ContactName</td>
-                        <td>@row.Phone</td>
-                        <td>@row.Fax</td>
-                    </tr>
+                    foreach (var row in ViewBag.Customers)
+                    {
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("CustomerOrdersInformation", "Customer", new { id = row.CustomerID })">@row.CustomerID</a>
+                            </td>
+                            <td>@row.CompanyName</td>
+                            <td>@row.ContactName</td>
+                            <td>@row.Phone</td>
+                            <td>@row.Fax</td>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>

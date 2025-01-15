@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "WCF\\",
+        "Action": "Start"
+      },
+      {
+        "Path": "WebUI\\WebUI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

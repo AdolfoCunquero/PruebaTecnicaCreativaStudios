@@ -1,11 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.35425.106
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCF", "WCF\", "{204CFD86-79A0-476E-8297-7DA0D616EC99}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{a6773384-7d8c-4007-93ae-3594abbb9967}|WCF.Business.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_60628"
 		Debug.AspNetCompiler.PhysicalPath = "WCF\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60628\"
@@ -30,6 +31,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj
 		{204CFD86-79A0-476E-8297-7DA0D616EC99} = {204CFD86-79A0-476E-8297-7DA0D616EC99}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{A90D81C7-4D53-4AC9-93E8-CCA0A7F02D7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{CD602568-F6D1-4A86-9C4D-7EE831E0A714}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF.Business", "WCF.Business\WCF.Business.csproj", "{A6773384-7D8C-4007-93AE-3594ABBB9967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI.Business", "WebUI.Business\WebUI.Business.csproj", "{8A1B1A0E-4FD1-4E84-AFBC-2C7659836284}"
+	ProjectSection(ProjectDependencies) = postProject
+		{204CFD86-79A0-476E-8297-7DA0D616EC99} = {204CFD86-79A0-476E-8297-7DA0D616EC99}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,9 +56,23 @@ Global
 		{074F60B9-6705-4F52-AEC8-B9AD04AF01CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{074F60B9-6705-4F52-AEC8-B9AD04AF01CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{074F60B9-6705-4F52-AEC8-B9AD04AF01CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6773384-7D8C-4007-93AE-3594ABBB9967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6773384-7D8C-4007-93AE-3594ABBB9967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6773384-7D8C-4007-93AE-3594ABBB9967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6773384-7D8C-4007-93AE-3594ABBB9967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A1B1A0E-4FD1-4E84-AFBC-2C7659836284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1B1A0E-4FD1-4E84-AFBC-2C7659836284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A1B1A0E-4FD1-4E84-AFBC-2C7659836284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A1B1A0E-4FD1-4E84-AFBC-2C7659836284}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{204CFD86-79A0-476E-8297-7DA0D616EC99} = {A90D81C7-4D53-4AC9-93E8-CCA0A7F02D7E}
+		{074F60B9-6705-4F52-AEC8-B9AD04AF01CD} = {CD602568-F6D1-4A86-9C4D-7EE831E0A714}
+		{A6773384-7D8C-4007-93AE-3594ABBB9967} = {A90D81C7-4D53-4AC9-93E8-CCA0A7F02D7E}
+		{8A1B1A0E-4FD1-4E84-AFBC-2C7659836284} = {CD602568-F6D1-4A86-9C4D-7EE831E0A714}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF8BB173-70D0-464E-9584-EC775F5BBF5E}

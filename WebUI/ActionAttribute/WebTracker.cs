@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Web.Mvc;
+using WebUI.Business.Services;
 
 namespace WebUI.ActionAttribute
 {
     public class WebTracker : ActionFilterAttribute
     {
-        private readonly WCFService.ServiceClient _wcfService;
+        private readonly WebTrackerService _webTrackerService;
         public WebTracker()
         {
-            _wcfService = new WCFService.ServiceClient();
+            _webTrackerService = new WebTrackerService();
         }
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
@@ -16,7 +17,7 @@ namespace WebUI.ActionAttribute
             {
                 string clientIp = filterContext.HttpContext.Request.UserHostAddress;
                 string urlRequest = filterContext.HttpContext.Request.Url?.AbsoluteUri;
-                _wcfService.AddWebTracker(new WCFService.WebTrackerRequest { SourceIp = clientIp, TimeOfAction = DateTime.Now, URLRequest = urlRequest });
+                _webTrackerService.AddWebTracker(clientIp, urlRequest);
             }
             catch (Exception) { }
         }

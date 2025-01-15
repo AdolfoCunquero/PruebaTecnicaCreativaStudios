@@ -2,15 +2,16 @@
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebUI.ActionAttribute;
+using WebUI.Business.Services;
 
 namespace WebUI.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly WCFService.ServiceClient _wcfService;
+        private readonly CustomerService _customerService;
         public CustomerController()
         {
-            _wcfService = new WCFService.ServiceClient();
+            _customerService = new CustomerService();
         }
 
         [WebTracker]
@@ -18,7 +19,7 @@ namespace WebUI.Controllers
         {
             try
             {
-                var customers = await _wcfService.GetCustomersByCountryAsync(country);
+                var customers = await _customerService.GetCustomersByCountryAsync(country);
                 ViewBag.Customers = customers;
                 ViewBag.Search = country;
             }
@@ -34,7 +35,7 @@ namespace WebUI.Controllers
         {
             try
             {
-                var orders = await _wcfService.CustomerOrdersInformationAsync(id);
+                var orders = await _customerService.CustomerOrdersInformationAsync(id);
                 ViewBag.Orders = orders;
             }
             catch (Exception ex)
